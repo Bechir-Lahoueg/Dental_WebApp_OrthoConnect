@@ -1,0 +1,193 @@
+.pricing-page {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    padding: 3rem 1rem;
+  }
+  
+  .pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .pricing-header-main {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .pricing-header-main h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .pricing-header-main p {
+    color: #666;
+    font-size: 1.125rem;
+  }
+  
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .pricing-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Styling du bouton */
+.btn-return {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none; /* Enlève le soulignement */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Ajoute une transition pour l'hover */
+}
+
+/* Effet au survol */
+.btn-return:hover {
+  background-color: #0056b3; /* Changer la couleur de fond au survol */
+  transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+
+  
+  /* Pricing Card Styles */
+  .pricing-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .pricing-header {
+    margin-bottom: 2rem;
+  }
+  
+  .pricing-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .pricing-description {
+    color: #666;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  .pricing-price {
+    margin-bottom: 2rem;
+  }
+  
+  .price {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #f04438;
+  }
+  
+  .price-detail {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .pricing-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: background-color 0.2s;
+  }
+  
+  .pricing-button.standard {
+    background-color: #f04438;
+    color: white;
+  }
+  
+  .pricing-button.premium {
+    background-color: #0d9488;
+    color: white;
+  }
+  
+  .pricing-button:hover {
+    opacity: 0.9;
+  }
+  
+  .plan-details {
+    flex-grow: 1;
+  }
+  
+  .details-title {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  
+  .bullet {
+    width: 4px;
+    height: 4px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+  }
+  
+  /* Addon Section Styles */
+  .addon-section {
+    margin-top: 2rem;
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .addon-title {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .addon-price {
+    color: #0d9488;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .addon-description {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.5;
+  }

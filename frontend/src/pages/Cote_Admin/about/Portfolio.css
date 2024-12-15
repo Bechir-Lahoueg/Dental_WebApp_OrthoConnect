@@ -1,0 +1,130 @@
+.portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #c8a89a;
+    min-height: 100vh;
+  }
+  
+  .portfolio-header {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .portfolio-header h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .portfolio-header .title {
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+  }
+  
+  .section-title {
+    color: white;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .project-item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .project-item.left {
+    flex-direction: row;
+  }
+  
+  .project-item.right {
+    flex-direction: row-reverse;
+  }
+  
+  .project-info {
+    flex: 1;
+  }
+  
+  .project-info h3 {
+    color: white;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  .project-info p {
+    color: white;
+    line-height: 1.6;
+  }
+  
+  .project-image {
+    flex: 1;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-item,
+    .project-item.left,
+    .project-item.right {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .portfolio {
+      padding: 1rem;
+    }
+  
+    .portfolio-header {
+      padding: 2rem 0;
+    }
+  
+    .portfolio-header h1 {
+      font-size: 2rem;
+    }
+  
+    .projects-grid {
+      gap: 2rem;
+    }
+  }
+  
+  /* Hover Effects */
+  .project-image img {
+    transition: transform 0.3s ease;
+  }
+  
+  .project-image img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Additional Styling */
+  .portfolio::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #c8a89a;
+    z-index: -1;
+  }

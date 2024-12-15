@@ -1,0 +1,205 @@
+/* Importer la police Montserrat depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Global styles for font */
+
+homepage- {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+  }
+  
+  /* Page with background image */
+  .homepage {
+    background-image: url('/public/homebackground.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ensure full screen height */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent overflow caused by the image */
+  }
+  
+  /* Navbar */
+  .homepage-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;  /* Keep navbar fixed at the top */
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(5px);  /* Add blur effect to the navbar */
+  }
+  
+  /* Logo container */
+.homepage-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .homepage-logo img {
+    width: 50px; /* Taille de l'image du logo */
+    height: 50px;
+    object-fit: cover; /* Assure que l'image est bien ajustée dans le conteneur */
+    border-radius: 50%; /* Si vous souhaitez un effet de bord arrondi */
+    margin-right: 10px; /* Espacement entre le logo et le texte */
+  }
+  
+  
+  
+  .homepage-site-name {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .homepage-ortho {
+    color: rgb(247, 143, 143);
+  }
+  
+  .homepage-connect {
+    color: #1E90FF;  /* Blue color for 'Connect' */
+  }
+  
+  /* Navigation links */
+  .homepage-nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .homepage-nav-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: normal;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .homepage-nav-link:hover {
+    color: #1E90FF;  /* Blue hover effect */
+  }
+  
+  .homepage-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #1E90FF;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .homepage-nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  /* Search icon next to Login */
+  .homepage-search-icon {
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  
+/* Ajouter l'animation FadeInSmooth */
+@keyframes fadeInSmooth {
+    0% {
+      opacity: 0; /* Début invisible */
+      transform: translateY(20px); /* Le texte commence légèrement plus bas */
+    }
+    50% {
+      opacity: 0.5; /* Semi-transparence à mi-chemin */
+      transform: translateY(10px); /* Le texte se déplace un peu plus près de sa position finale */
+    }
+    100% {
+      opacity: 1; /* Le texte devient complètement visible */
+      transform: translateY(0); /* Le texte arrive à sa position finale */
+    }
+  }
+  
+  /* Main content styling */
+  .homepage-main-content {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    transform: translate(-10%, -20%);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    width: 40%; /* Ajuste la largeur pour mieux contrôler la mise en page */
+    font-family: 'Montserrat', sans-serif; /* Applique la nouvelle police */
+    animation: fadeInSmooth 1.5s ease-out; /* Applique l'animation professionnelle */
+  }
+  
+  /* Titre (h1) */
+  .homepage-main-content h1 {
+    font-size: 36px; /* Taille plus grande pour le titre */
+    font-weight: 600; /* Poids du texte pour plus de visibilité */
+    margin-bottom: 20px; /* Espace sous le titre */
+    text-transform: capitalize; /* Première lettre en majuscule */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+    line-height: 1.4; /* Espacement entre les lignes du titre */
+    opacity: 0; /* Démarre invisible */
+    animation: fadeInSmooth 3s ease-out forwards; /* Applique l'animation au titre */
+    animation-delay: 0.5s; /* Délai avant que le titre n'apparaisse */
+  }
+  
+  /* Colorier le texte avec des parties différentes */
+  .homepage-main-content h1 span {
+    color: black; /* Par défaut tout le texte est noir */
+  }
+  
+  .homepage-main-content h1 .homepage-highlight {
+    color: #1E90FF;  /* Bleu pour "dès aujourd'hui !" */
+  }
+  
+  /* Paragraphe spécifique */
+  .homepage-main-content p {
+    display: block;
+    margin-top: 10px;
+    line-height: 1.8;  /* Espacement entre les lignes pour meilleure lisibilité */
+    font-size: 18px; /* Taille de police du paragraphe */
+    color: #333333; /* Couleur sombre pour le texte */
+    font-weight: 400; /* Poids normal pour le texte du paragraphe */
+    font-family: 'Montserrat', sans-serif;  /* Applique la même police au paragraphe */
+    max-width: 600px; /* Limite la largeur pour éviter un texte trop large */
+    text-align: justify; /* Justifie le texte pour une lecture plus fluide */
+    margin-bottom: 20px; /* Espace sous le paragraphe */
+    opacity: 0; /* Démarre invisible */
+    animation: fadeInSmooth 1.5s ease-out forwards; /* Applique l'animation au paragraphe */
+    animation-delay: 1.5s; /* Délai avant que le paragraphe n'apparaisse */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .homepage-navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  
+    .homepage-nav-links {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .homepage-site-name {
+      font-size: 22px;
+    }
+  
+    .homepage-logo {
+      width: 40px;
+    }
+  }
+  
